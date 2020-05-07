@@ -8,14 +8,13 @@ Chegou a hora de mais uma atividade prática - UHUUUL
 
 O seu desafio é criar uma página similar a do <a href="https://www.airbnb.com.br/">Airbnb</a> através do consumo da API de quartos, usando Javascript Vanilla e Flexbox para organizá-los em cards na tela, a partir <a href="https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72">deste banco de dados aqui</a>.
 
-Resultados esperados
-Tela com cards contendo:
+## Resultados esperados
+###### Tela com cards contendo:
+  > Imagem
+  > Tipo de propriedade
+  > Preço
 
-Imagem
-Tipo de propriedade
-Preço
-Para ir além...
-
+## Para ir além...
 Pensando em uma melhor experiência, você ainda pode adicionar outras funcionalidades. Aqui vão alguns exemplos:
 
 > Limite de itens por página - Paginar o resultado da API para que limite o número de items por página para não sobrecarregar o navegador, aumentando assim a performance do site para os usuários;
