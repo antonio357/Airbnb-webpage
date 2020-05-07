@@ -11,7 +11,9 @@ O seu desafio é criar uma página similar a do <a href="https://www.airbnb.com.
 ## Resultados esperados
 ###### Tela com cards contendo:
   > Imagem
+  
   > Tipo de propriedade
+  
   > Preço
 
 ## Para ir além...
