@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* notification */
+.notification {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.notification a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.notification a:hover {
+    background: #f1f1f1;
+    color: black;
+}
+/* notification */
+
+/* navbar */
+#navbar {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.logoIcon {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logoIcon img {
+    height: 45px;
+    width: 200px;
+}
+/* navbar */
+
+/* script */
+#script {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+.card {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 350px;
+    border: grey 1px solid;
+    box-shadow: gray 2px 2px 3px;
+    border-radius: 15px;
+}
+.card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px 8px 0px 0px;
+    margin-bottom: 13px;
+}
+.cardText {
+    height: 100px;
+    margin-left: 10px;
+    margin-bottom: 13px;
+    align-items: stretch;
+}
+/* script */
