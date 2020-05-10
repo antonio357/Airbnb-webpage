@@ -27,8 +27,8 @@ body {
 }
 /* notification */
 
-/* navbar */
-#navbar {
+/* logobar */
+#logobar {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -46,7 +46,7 @@ body {
     height: 45px;
     width: 200px;
 }
-/* navbar */
+/* logobar */
 
 /* script */
 #script {
@@ -79,3 +79,33 @@ body {
     align-items: stretch;
 }
 /* script */
+
+/* navbar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(180, 149, 149, 0.664);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    border-radius: 10px;
+    background-color: rgba(60, 219, 140, 0.637);
+}
+#me {
+    background-color: rgba(60, 219, 140, 0.637);
+}
+/* navbar */
