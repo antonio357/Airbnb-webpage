@@ -1,8 +1,8 @@
 const dataBaseApiUrl = "https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72";
 
 const getJsonUrl = async (url) => {
-    // fetch como chamada assincrona
     let response = await fetch(url);
+    if (!response.ok) response = await fetch("data.json");
     const textResponse = await response.text();
     return JSON.parse(textResponse);
 };
