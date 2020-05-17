@@ -7,11 +7,23 @@ const getJsonUrl = async (url) => {
     return JSON.parse(textResponse);
 };
 
-const renderPage = async () => {
-    let jsonRoomsData = await getJsonUrl(dataBaseApiUrl);
+const paginateArray = (array, itemsPerPage) => {
+    return array.reduce((total, current, index) => {
+        const belongArray = Math.ceil((index + 1) / itemsPerPage) - 1
+        total[belongArray] ? total[belongArray].push(current) : total.push([current])
+        return total;
+    }, [])
+};
 
-    document.getElementById("script").innerHTML = `${jsonRoomsData
+const renderPage = async (page) => {
+    let jsonRoomsData = await getJsonUrl(dataBaseApiUrl);
+    jsonRoomsData = paginateArray(jsonRoomsData, 10);
+    
+
+    document.getElementById("script").innerHTML = `${jsonRoomsData[page - 1]
         .map(function (room) {
+        console.log("renderPage -> room", room)
+            
             return `
         <div class="card">
         <div class="cardImg">
@@ -29,4 +41,4 @@ const renderPage = async () => {
         .join("")}`;
 };
 
-renderPage();
+renderPage(1);
