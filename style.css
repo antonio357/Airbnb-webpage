@@ -5,10 +5,11 @@ body {
 
 /* notification */
 .notification {
+    margin: 0;
     overflow: hidden;
     background-color: #333;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
 }
 
@@ -29,6 +30,7 @@ body {
 
 /* logobar */
 #logobar {
+    margin: 0px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -54,7 +56,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */ margin: 0;
 }
 .card {
     margin: 15px;
@@ -81,6 +83,9 @@ body {
 /* script */
 
 /* navbar */
+#navbar {
+    margin: 0;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -111,34 +116,29 @@ li a:hover {
 /* navbar */
 
 /* pagination menu */
-/* .pagination-wrapper {
-    width: 100%;
+.pagination-menu {
     display: flex;
     justify-content: center;
-    margin: 1rem 0;
+    margin: 0;
 }
 
-.pagination span {
+.pagination-menu button {
+    all: inherit;
     color: black;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
-    margin: 0.3rem;
-    transition: background-color 0.3s;
-    cursor: pointer;
-    border-radius: 50%;
 }
 
-.page-changer {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-}
-
-.pagination span.active {
-    background-color: black;
+.pagination-menu button.active {
+    background-color: #4caf50;
     color: white;
+    border-radius: 5px;
 }
 
-.pagination span:hover:not(.active) {
+.pagination-menu button:hover:not(.active) {
     background-color: #ddd;
-} */
+    border-radius: 5px;
+}
 /* pagination menu */
+
