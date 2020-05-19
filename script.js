@@ -1,6 +1,6 @@
 const dataBaseApiUrl =
     "https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72";
-let jsonRoomsData = 1;
+let jsonRoomsData;
 let currentPage = 1;
 
 const getJsonUrl = async (url) => {
@@ -12,15 +12,10 @@ const getJsonUrl = async (url) => {
 
 const paginateArray = (array, itemsPerPage) => {
     return array.reduce((total, current, index) => {
-        /* console.log("paginateArray -> total", total)
-        console.log("paginateArray -> current", current)
-        console.log("paginateArray -> index", index) */
         const belongArray = Math.ceil((index + 1) / itemsPerPage) - 1;
-        /* console.log("paginateArray -> belongArray", belongArray) */
         total[belongArray]
             ? total[belongArray].push(current)
             : total.push([current]);
-        /* console.log("paginateArray -> total", total) */
         return total;
     }, []);
 };
@@ -46,11 +41,6 @@ const renderPage = () => {
         .join("")}`;
 };
 
-const renderisação = () => {
-    
-}
-
-
 const createPaginationMenu = async () => {
     jsonRoomsData = await getJsonUrl(dataBaseApiUrl);
     jsonRoomsData = paginateArray(jsonRoomsData, 8);
@@ -58,7 +48,6 @@ const createPaginationMenu = async () => {
     renderPage()
 
     let paginationMenu = document.querySelector(".pagination-menu");
-    console.log("createPaginationMenu -> paginationMenu", paginationMenu);
     let pages = [];
     if (jsonRoomsData.length > 1) {
         for (let i = 0; i < jsonRoomsData.length; i++) {
